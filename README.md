@@ -13,10 +13,11 @@ A lightweight in-app browser built using WKWebView.
 - Reload support
 - Basic toolbar controls
 
-## Requirements
-
-- iOS 15+
-- Xcode 15+
+## Technical Details
+- Built with Swift
+- Uses UIKit and WebKit (WKWebView)
+- Supports iOS 15+
+- Developed using Xcode 15+
 
 ## Author
 
