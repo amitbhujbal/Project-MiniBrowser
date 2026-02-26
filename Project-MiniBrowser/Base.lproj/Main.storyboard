@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_MiniBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47b-hG-jnG">
+                                <rect key="frame" x="16" y="735" width="278" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="5oA-o0-xYm"/>
+                                    <constraint firstAttribute="height" constant="35" id="dtL-bf-yvy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ha7-K8-BaZ">
+                                <rect key="frame" x="302" y="735" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MiniBrowser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdb-m6-CJt">
+                                <rect key="frame" x="16" y="777" width="196" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="NKg-Tg-c40"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0Oa-TH-gxh">
+                                <rect key="frame" x="16" y="723" width="361" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="hJz-P2-Joc"/>
+                                    <constraint firstAttribute="height" constant="4" id="xCx-hd-bvb"/>
+                                </constraints>
+                            </progressView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8V-PK-3mo">
+                                <rect key="frame" x="212" y="779" width="165" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="hNx-Cq-xuU"/>
+                                    <constraint firstAttribute="height" constant="44" id="iUI-Ut-6KF"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem image="arrow.left" catalog="system" id="wVm-be-Ioh">
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="backButtonAction:" destination="BYZ-38-t0r" id="qNL-Qy-WgK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="arrow.right" catalog="system" id="zYh-U6-8wZ">
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="forwardButtonAction:" destination="BYZ-38-t0r" id="QMJ-nl-XW3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="arrow.clockwise" catalog="system" id="iK1-Cy-xdH">
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="reloadButtonAction:" destination="BYZ-38-t0r" id="XSW-fo-wBh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="safari.fill" catalog="system" id="LXy-ei-ohB">
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="openSafariButtonAction:" destination="BYZ-38-t0r" id="nC1-oe-rdY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wry-7H-pLF">
+                                <rect key="frame" x="6" y="59" width="380" height="656"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="380" id="XM0-f2-YZv"/>
+                                    <constraint firstAttribute="height" constant="656" id="rcC-te-5NC"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="47b-hG-jnG" firstAttribute="top" secondItem="0Oa-TH-gxh" secondAttribute="bottom" constant="8" symbolic="YES" id="1Q0-28-ybW"/>
+                            <constraint firstItem="47b-hG-jnG" firstAttribute="top" secondItem="0Oa-TH-gxh" secondAttribute="bottom" constant="8" symbolic="YES" id="2Au-GA-fkc"/>
+                            <constraint firstItem="0Oa-TH-gxh" firstAttribute="top" secondItem="Wry-7H-pLF" secondAttribute="bottom" constant="8" symbolic="YES" id="4Gq-j3-VXu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wry-7H-pLF" secondAttribute="trailing" constant="7" id="8Wg-14-sV3"/>
+                            <constraint firstItem="D8V-PK-3mo" firstAttribute="top" secondItem="47b-hG-jnG" secondAttribute="bottom" constant="9" id="8gM-1r-2t8"/>
+                            <constraint firstItem="Ha7-K8-BaZ" firstAttribute="trailing" secondItem="0Oa-TH-gxh" secondAttribute="trailing" id="8wS-rr-WlU"/>
+                            <constraint firstItem="47b-hG-jnG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Aog-Hz-QMw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Oa-TH-gxh" secondAttribute="trailing" constant="16" id="GWW-fe-lHs"/>
+                            <constraint firstItem="Wry-7H-pLF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="MWi-lD-KZe"/>
+                            <constraint firstItem="Wry-7H-pLF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RjN-9X-AAM"/>
+                            <constraint firstItem="Ha7-K8-BaZ" firstAttribute="leading" secondItem="47b-hG-jnG" secondAttribute="trailing" constant="8" symbolic="YES" id="XA1-wm-u41"/>
+                            <constraint firstAttribute="bottom" secondItem="D8V-PK-3mo" secondAttribute="bottom" constant="29" id="bUG-kZ-8mL"/>
+                            <constraint firstItem="Ha7-K8-BaZ" firstAttribute="bottom" secondItem="47b-hG-jnG" secondAttribute="bottom" id="cEm-96-dU2"/>
+                            <constraint firstItem="Tdb-m6-CJt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="h37-pl-r0w"/>
+                            <constraint firstItem="0Oa-TH-gxh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="krb-JD-RUi"/>
+                            <constraint firstAttribute="trailing" secondItem="D8V-PK-3mo" secondAttribute="trailing" constant="16" id="l1K-Tg-09e"/>
+                            <constraint firstItem="0Oa-TH-gxh" firstAttribute="top" secondItem="Wry-7H-pLF" secondAttribute="bottom" constant="8" symbolic="YES" id="lCm-w7-MiJ"/>
+                            <constraint firstItem="Ha7-K8-BaZ" firstAttribute="top" secondItem="47b-hG-jnG" secondAttribute="top" id="lX0-kM-2HC"/>
+                            <constraint firstItem="D8V-PK-3mo" firstAttribute="leading" secondItem="Tdb-m6-CJt" secondAttribute="trailing" id="lZw-wS-UAQ"/>
+                            <constraint firstItem="D8V-PK-3mo" firstAttribute="leading" secondItem="Tdb-m6-CJt" secondAttribute="trailing" id="mxJ-fP-ZN7"/>
+                            <constraint firstItem="Tdb-m6-CJt" firstAttribute="top" secondItem="47b-hG-jnG" secondAttribute="bottom" constant="7" id="qqS-m8-Zer"/>
+                            <constraint firstAttribute="bottom" secondItem="Tdb-m6-CJt" secondAttribute="bottom" constant="39" id="sDp-qR-hHg"/>
+                            <constraint firstItem="Tdb-m6-CJt" firstAttribute="top" secondItem="47b-hG-jnG" secondAttribute="bottom" constant="7" id="tLw-x6-HYh"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backButton" destination="wVm-be-Ioh" id="H76-7c-4Mk"/>
+                        <outlet property="forwardButton" destination="zYh-U6-8wZ" id="6IZ-0V-fTU"/>
+                        <outlet property="goButton" destination="Ha7-K8-BaZ" id="0ea-qA-0ge"/>
+                        <outlet property="inputURLTextField" destination="47b-hG-jnG" id="9iK-Cu-RC6"/>
+                        <outlet property="opensafariButton" destination="LXy-ei-ohB" id="9wq-xS-mow"/>
+                        <outlet property="progressBar" destination="0Oa-TH-gxh" id="Fau-kb-an0"/>
+                        <outlet property="reloadButton" destination="iK1-Cy-xdH" id="0ad-Oa-ql2"/>
+                        <outlet property="toolbarControl" destination="D8V-PK-3mo" id="y1T-t6-UUC"/>
+                        <outlet property="webView" destination="Wry-7H-pLF" id="FeM-cV-o1e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119.84732824427481" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <image name="arrow.right" catalog="system" width="128" height="95"/>
+        <image name="safari.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
